@@ -193,19 +193,13 @@ class AnnotationServiceTest {
                 ]
                 """),mapper.readTree("""
                 {
-                      "selector": [
-                        {
-                          "exact": "Growth increases",
-                          "type": "TextQuoteSelector"
-                        },
-                        {
-                          "start": 0,
-                          "end": 16,
-                          "type": "TextPositionSelector"
-                        }
-                      ]
-                    }
-                """));
+                     "source": "http://localhost:3000/books/csebooks/java-programming/foundation/MealMingle.png",
+                     "selector": {
+                       "type": "SvgSelector",
+                       "value": "<svg><polygon points=\\"431,933 556,1024 462,1067 373,972\\"></polygon></svg>"
+                     }
+               }
+               """));
         return annotation;
     }
 
