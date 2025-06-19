@@ -1,6 +1,5 @@
 # Connection Details
 name: "NoteBook"
-multipleManagers: true
 url: "jdbc:postgresql://localhost:5432/gurukulams_notebook_db"
 userName: "tom"
 password: "password"

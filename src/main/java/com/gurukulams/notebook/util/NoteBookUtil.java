@@ -47,7 +47,8 @@ public class NoteBookUtil {
      */
     public AnnotationStore getAnnotationStore()
             throws SQLException, IOException {
-        return new DataManager()
+        return DataManager
+                .getManager()
                 .getAnnotationStore();
     }
 

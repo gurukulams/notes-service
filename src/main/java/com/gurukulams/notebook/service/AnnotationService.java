@@ -172,16 +172,18 @@ public class AnnotationService {
             throws SQLException, IOException {
         if (locale == null) {
             return NoteBookUtil.getNoteBookUtil()
-                    .getAnnotationStore().delete(
-                    AnnotationStore.id().eq(id)
+                    .getAnnotationStore()
+                    .delete()
+                    .where(AnnotationStore.id().eq(id)
                             .and().onType().eq(onType)
                             .and().onInstance().eq(onInstance)
                             .and().locale().isNull())
                     .execute(getDataSource(userName)) == 1;
         }
         return NoteBookUtil.getNoteBookUtil()
-                .getAnnotationStore().delete(
-                AnnotationStore.id().eq(id)
+                .getAnnotationStore()
+                .delete()
+                .where(AnnotationStore.id().eq(id)
                         .and().onType().eq(onType)
                         .and().onInstance().eq(onInstance)
                         .and().locale()
