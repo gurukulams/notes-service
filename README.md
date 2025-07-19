@@ -2,4 +2,9 @@
 
 Gurukulams Note Book manages Note Book of the learners.
 
-## Dev
+## Dev Setup
+
+```shell
+docker-compose up -d
+./mvnw clean package
+```
